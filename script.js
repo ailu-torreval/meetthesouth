@@ -8,9 +8,44 @@ const options = {
 
 fetch(url, options)
   .then((response) => response.json())
-  .then((data) => handlePics(data));
+  .then((data) => handleData(data));
 
-function handlePics(data) {
-console.log(data)
+function handleData(rawData) {
+  const data = rawData[0];
+  document.querySelector(".header-title").textContent = data.header_title;
+  document.querySelector(".contact-link").textContent = data.header_btn;
+
+  document.querySelector(".hero-title").textContent = data.hero_title;
+  document.querySelector(".hero-subtitle").textContent = data.hero_subtitle;
+  document.querySelector(".hero-link").textContent = data.hero_btn;
+
+  document.querySelector(".strength1-title").textContent = data.strength1_title;
+  document.querySelector(".strength1-txt").textContent = data.strength1_txt;
+  document.querySelector(".strength1-img").src = "./assets/dummy.jpg";
+  // document.querySelector(".strength1-img").src = "./assets/" + data.strength1_img;
+
+  document.querySelector(".strength2-title").textContent = data.strength2_title;
+  document.querySelector(".strength2-txt").textContent = data.strength2_txt;
+  document.querySelector(".strength2-img").src = "./assets/dummy.jpg";
+  // document.querySelector(".strength2-img").src = "./assets/" + data.strength2_img;
+
+  document.querySelector(".strength3-title").textContent = data.strength3_title;
+  document.querySelector(".strength3-txt").textContent = data.strength3_txt;
+  document.querySelector(".strength3-img").src = "./assets/dummy.jpg";
+  // document.querySelector(".strength3-img").src = "./assets/" + data.strength3_img;
+
+  if(data.strength4_title) {
+    document.querySelector(".strength4-title").textContent = data.strength4_title;
+    document.querySelector(".strength4-txt").textContent = data.strength4_txt;
+    document.querySelector(".strength4-img").src = "./assets/dummy.jpg";
+    // document.querySelector(".strength4-img").src = "./assets/" + data.strength4_img;
+  } else {
+    document.querySelector("#strength4").classList.add("hidden");
+  }
+
+  
+
+  
 }
+
 
