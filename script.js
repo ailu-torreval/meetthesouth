@@ -43,7 +43,27 @@ function handleData(rawData) {
     document.querySelector("#strength4").classList.add("hidden");
   }
 
-  
+  document.querySelector(".product1-title").textContent = data.product1_title;
+  document.querySelector(".product1-txt").textContent = data.product1_txt;
+  document.querySelector(".product1-btn").textContent = data.product1_btn;
+  document.querySelector(".product1-img").src = "./assets/dummy.jpg";
+  // document.querySelector(".product1-img").src = "./assets/" + data.product1_img;
+
+  document.querySelector(".product2-title").textContent = data.product2_title;
+  document.querySelector(".product2-txt").textContent = data.product2_txt;
+  document.querySelector(".product2-btn").textContent = data.product2_btn;
+  document.querySelector(".product2-img").src = "./assets/dummy.jpg";
+  // document.querySelector(".product2-img").src = "./assets/" + data.product2_img;
+
+  document.querySelector(".product3-title").textContent = data.product3_title;
+  document.querySelector(".product3-txt").textContent = data.product3_txt;
+  document.querySelector(".product3-btn").textContent = data.product3_btn;
+  document.querySelector(".product3-img").src = "./assets/dummy.jpg";
+  // document.querySelector(".product3-img").src = "./assets/" + data.product3_img;
+
+
+
+
 
   
 }
